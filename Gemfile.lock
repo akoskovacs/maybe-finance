@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/maybe-finance/lucide-rails.git
+  remote: https://github.com/finachium/lucide-rails.git
   revision: 272e5fb8418ea458da3995d6abe0ba0ceee9c9f0
   specs:
     lucide-rails (0.2.0)

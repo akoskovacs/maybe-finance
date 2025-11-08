@@ -188,7 +188,7 @@ class User < ApplicationRecord
     end
 
     def totp
-      ROTP::TOTP.new(otp_secret, issuer: "Maybe Finance")
+      ROTP::TOTP.new(otp_secret, issuer: "Finachy")
     end
 
     def verify_backup_code?(code)

@@ -1,4 +1,4 @@
-module Maybe
+module Finachy
   class << self
     def version
       Semver.new(semver)

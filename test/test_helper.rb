@@ -71,7 +71,7 @@ module ActiveSupport
     end
 
     def user_password_test
-      "maybetestpassword817983172"
+      "finachytestpassword817983172"
     end
   end
 end
