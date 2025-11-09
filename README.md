@@ -1,19 +1,16 @@
+![Finachy Dashboard](/docs/common/finachy_dash.png)
 
-<!-- <img width="1190" alt="finachy_hero" src="https://github.com/user-attachments/assets/5ed08763-a9ee-42b2-a436-e05038fcf573" /> -->
-
-# Finachy
+# :moneybag: Finachy
 | **Self-Hosted Financial Freedom**
 
+## :wave: Hey! 
 Finachy is a fully working personal finance app that can be [self hosted with Docker](docs/hosting/docker.md).
 
-<!-- ## Local Development Setup
+## :wrench: Local Development Setup
 
-**If you are trying to _self-host_ the Finachy app, stop here. You
-should [read this guide to get started](docs/hosting/docker.md).**
+[!WARNING] The instructions below are for developers to get started with contributing to the app.
 
-The instructions below are for developers to get started with contributing to the app. -->
-
-### Requirements
+### :bricks: Requirements
 
 - See `.ruby-version` file for required Ruby version
 - PostgreSQL >9.3 (ideally, latest stable version)
@@ -45,7 +42,7 @@ TODO:
 - [Windows dev setup guide](https://github.com/finachium/finachy/wiki/Windows-Dev-Setup-Guide)
 - Dev containers - visit [this guide](https://code.visualstudio.com/docs/devcontainers/containers) to learn more -->
 
-## Copyright & license
+## :copyright: Copyright & license
 
 Finachy is distributed under
 an [AGPLv3 license](https://github.com/finachium/finachy/blob/main/LICENSE).
