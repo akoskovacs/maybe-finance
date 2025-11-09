@@ -32,8 +32,8 @@
      inkscape:cy="-84.279231"
      inkscape:window-width="1582"
      inkscape:window-height="1236"
-     inkscape:window-x="412"
-     inkscape:window-y="66"
+     inkscape:window-x="2196"
+     inkscape:window-y="42"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
@@ -42,17 +42,15 @@
      inkscape:label="Réteg 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:122.264px;font-family:cmr10;-inkscape-font-specification:'cmr10, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:14.4791"
-       x="32.058014"
-       y="98.328003"
+    <g
+       aria-label="F"
+       transform="scale(0.99921601,1.0007846)"
        id="text6358-1-1-4-6-9-3-0-5-7-0-7"
-       transform="scale(0.99921601,1.0007846)"><tspan
-         sodipodi:role="line"
-         id="tspan6356-1-5-4-2-7-8-6-7-3-0-1"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:122.264px;font-family:Dyuthi;-inkscape-font-specification:'Dyuthi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;stroke-width:14.4791"
-         x="32.058014"
-         y="98.328003">F</tspan></text>
+       style="font-size:122.264px;font-family:cmr10;-inkscape-font-specification:'cmr10, Normal';fill:#4d4d4d;stroke-width:14.4791">
+      <path
+         d="m 58.862963,65.851628 v 24.41698 q 0,3.701352 -2.567066,6.328118 -2.567067,2.626765 -6.328117,2.626765 h -0.119399 q -3.641652,0 -6.208719,-2.626765 -2.626765,-2.626766 -2.626765,-6.328118 V 34.808034 q 0,-4.53714 3.283457,-7.820597 3.283457,-3.283457 7.820597,-3.283457 h 29.84961 q 3.283457,0 5.253531,2.507367 1.313383,1.611879 1.313383,4.178945 v 2.567066 q 0,1.850676 -2.208871,3.581954 -2.208871,1.731277 -4.358043,1.611878 L 58.862963,37.076605 v 17.312773 l 23.342395,-1.074586 q 2.626765,-0.119398 4.656539,1.970074 2.029773,2.089473 2.089472,4.775938 v 0.119398 q 0,2.805863 -2.149172,4.835637 -2.149171,2.029773 -4.596839,1.910375 z"
+         style="font-family:Dyuthi;-inkscape-font-specification:'Dyuthi, Normal'"
+         id="path685" />
+    </g>
   </g>
 </svg>
