@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="125mm"
+   height="120mm"
+   viewBox="0 0 125 120"
+   version="1.1"
+   id="svg15841"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="logo-squircle.svg"
+   inkscape:export-filename="finachy_f3.png"
+   inkscape:export-xdpi="101.6"
+   inkscape:export-ydpi="101.6"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15843"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.59919863"
+     inkscape:cx="198.59858"
+     inkscape:cy="-84.279231"
+     inkscape:window-width="1582"
+     inkscape:window-height="1236"
+     inkscape:window-x="702"
+     inkscape:window-y="82"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs15838" />
+  <g
+     inkscape:label="Réteg 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#71ad66;fill-opacity:1;stroke:none;stroke-width:1.85285"
+       id="rect10330-3-6-2"
+       width="125.34657"
+       height="120.22597"
+       x="0"
+       y="0"
+       ry="12.887012"
+       inkscape:export-filename="logo-color.png"
+       inkscape:export-xdpi="14.589949"
+       inkscape:export-ydpi="14.589949" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:122.264px;font-family:cmr10;-inkscape-font-specification:'cmr10, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#f2f2f2;fill-opacity:1;stroke:none;stroke-width:14.4791"
+       x="32.058014"
+       y="98.328003"
+       id="text6358-1-1-4-6-9-3-0-5-7-0-7"
+       transform="scale(0.99921601,1.0007846)"><tspan
+         sodipodi:role="line"
+         id="tspan6356-1-5-4-2-7-8-6-7-3-0-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:122.264px;font-family:Dyuthi;-inkscape-font-specification:'Dyuthi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#f2f2f2;stroke-width:14.4791"
+         x="32.058014"
+         y="98.328003">F</tspan></text>
+  </g>
+</svg>
