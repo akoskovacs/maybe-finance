@@ -1,6 +1,4 @@
 
-<img width="1190" alt="maybe_hero" src="https://github.com/user-attachments/assets/5ed08763-a9ee-42b2-a436-e05038fcf573" />
-
 # Maybe: The personal finance app for everyone
 
 > [!IMPORTANT]
