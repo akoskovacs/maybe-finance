@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/maybe-finance/lucide-rails.git
+  remote: https://github.com/finachium/lucide-rails.git
   revision: 272e5fb8418ea458da3995d6abe0ba0ceee9c9f0
   specs:
     lucide-rails (0.2.0)
@@ -124,7 +124,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.6)
       msgpack (~> 1.2)
-    brakeman (7.1.0)
+    brakeman (7.1.1)
       racc
     builder (3.3.0)
     capybara (3.40.0)

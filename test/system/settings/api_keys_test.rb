@@ -11,7 +11,7 @@ class Settings::ApiKeysTest < ApplicationSystemTestCase
     visit settings_api_key_path
 
     assert_text "Create Your API Key"
-    assert_text "Get programmatic access to your Maybe data"
+    assert_text "Get programmatic access to your Finachy data"
     assert_text "Access your account data programmatically"
     assert_link "Create API Key", href: new_settings_api_key_path
   end
@@ -134,7 +134,7 @@ class Settings::ApiKeysTest < ApplicationSystemTestCase
     assert_no_selector "#confirm-dialog"
 
     assert_text "Create Your API Key"
-    assert_text "Get programmatic access to your Maybe data"
+    assert_text "Get programmatic access to your Finachy data"
 
     # Key should be revoked in the database
     api_key.reload

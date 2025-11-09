@@ -6,7 +6,7 @@ Bundler.setup
 require 'derailed_benchmarks'
 require 'derailed_benchmarks/tasks'
 
-# Custom auth helper for Maybe's session-based authentication
+# Custom auth helper for Finachy's session-based authentication
 class CustomAuth < DerailedBenchmarks::AuthHelper
   def setup
     # No setup needed
@@ -14,7 +14,7 @@ class CustomAuth < DerailedBenchmarks::AuthHelper
 
   def call(env)
     # Make sure this user is created in the DB with realistic data before running benchmarks
-    user = User.find_by!(email: "user@maybe.local")
+    user = User.find_by!(email: "user@finachy.local")
 
     Rails.logger.debug "Found user for benchmarking: #{user.email}"
 

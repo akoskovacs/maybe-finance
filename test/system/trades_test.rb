@@ -18,41 +18,60 @@ class TradesTest < ApplicationSystemTestCase
 
   test "can create buy transaction" do
     shares_qty = 25
+    trade_date = Date.current
 
     open_new_trade_modal
 
+    # When provider is nil, the field is manual_ticker
     fill_in "Ticker symbol", with: "AAPL"
-    fill_in "Date", with: Date.current
+    fill_in "Date", with: trade_date
     fill_in "Quantity", with: shares_qty
     fill_in "model[price]", with: 214.23
 
-    click_button "Add transaction"
+    perform_enqueued_jobs do
+      click_button "Add transaction"
+    end
 
+    # Check if there are any form errors
+    assert_no_text "can't be blank", wait: 2
+
+    # Wait for the form submission to complete, then navigate to activity tab
+    # The redirect goes to account page (with holdings tab), so we navigate to activity
     visit_trades
 
     within_trades do
-      assert_text "Buy #{shares_qty}.0 shares of AAPL"
+      # Look for the specific trade with the quantity we created
+      assert_text "Buy #{shares_qty}.0 shares of AAPL", wait: 5
     end
   end
 
   test "can create sell transaction" do
     qty = 10
+    trade_date = Date.current
     aapl = @account.holdings.find { |h| h.security.ticker == "AAPL" }
 
     open_new_trade_modal
 
     select "Sell", from: "Type"
     fill_in "Ticker symbol", with: "AAPL"
-    fill_in "Date", with: Date.current
+    fill_in "Date", with: trade_date
     fill_in "Quantity", with: qty
     fill_in "model[price]", with: 215.33
 
-    click_button "Add transaction"
+    perform_enqueued_jobs do
+      click_button "Add transaction"
+    end
 
+    # Check if there are any form errors
+    assert_no_text "can't be blank", wait: 2
+
+    # Wait for the form submission to complete, then navigate to activity tab
+    # The redirect goes to account page (with holdings tab), so we navigate to activity
     visit_trades
 
     within_trades do
-      assert_text "Sell #{qty}.0 shares of AAPL"
+      # Look for the specific sell trade we created
+      assert_text "Sell #{qty}.0 shares of AAPL", wait: 5
     end
   end
 

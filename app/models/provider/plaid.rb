@@ -1,7 +1,7 @@
 class Provider::Plaid
   attr_reader :client, :region
 
-  MAYBE_SUPPORTED_PLAID_PRODUCTS = %w[transactions investments liabilities].freeze
+  FINACHY_SUPPORTED_PLAID_PRODUCTS = %w[transactions investments liabilities].freeze
   MAX_HISTORY_DAYS = Rails.env.development? ? 90 : 730
 
   def initialize(config, region: :us)
@@ -45,7 +45,7 @@ class Provider::Plaid
   def get_link_token(user_id:, webhooks_url:, redirect_url:, accountable_type: nil, access_token: nil)
     request_params = {
       user: { client_user_id: user_id },
-      client_name: "Maybe Finance",
+      client_name: "Finachy",
       country_codes: country_codes,
       language: "en",
       webhook: webhooks_url,
@@ -195,7 +195,7 @@ class Provider::Plaid
     def get_additional_consented_products(accountable_type)
       return [] if eu?
 
-      MAYBE_SUPPORTED_PLAID_PRODUCTS - [ get_primary_product(accountable_type) ]
+      FINACHY_SUPPORTED_PLAID_PRODUCTS - [ get_primary_product(accountable_type) ]
     end
 
     def eu?

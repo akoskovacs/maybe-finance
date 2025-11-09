@@ -8,7 +8,7 @@ valuation:
   entryable: one
 
 trade:
-  name: Purchase 10 shares of AAPL
+  name: Buy 10.0 shares of AAPL
   date: <%= 1.day.ago.to_date %>
   amount: 2140 # 10 shares * $214 per share
   currency: USD
