@@ -1,5 +1,5 @@
 include Makefile.inc
-SUDO=sudo
+
 DOCKER=docker
 BUNDLE=./bin/bundle
 RAILS=./bin/rails
