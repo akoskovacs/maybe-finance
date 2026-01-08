@@ -20,7 +20,7 @@
         <div class="px-4 py-3 border-t border-tertiary">
           <p class="text-sm">
             <span class="font-medium text-primary">Version:</span>
-            <%= link_to Finachy.version.to_release_tag, "https://github.com/finachium/finachy/releases/tag/#{Finachy.version.to_release_tag}", target: "_blank", class: "hover:underline" %>
+            <%= link_to Finachy.version, "https://github.com/finachium/finachy/releases/tag/#{Finachy.version}", target: "_blank", class: "hover:underline" %>
 
             <% if Finachy.commit_sha.present? %>
               (<%= link_to Finachy.commit_sha.first(7), "https://github.com/finachium/finachy/commit/#{Finachy.commit_sha}", target: "_blank", class: "hover:underline" %>)
