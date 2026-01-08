@@ -74,24 +74,24 @@ class MarketDataImporter
            .group("entries.currency", "accounts.currency")
            .minimum("entries.date")
            .each do |(source, target), date|
-        key = [ source, target ]
-        pair_dates[key] = [ pair_dates[key], date ].compact.min
-      end
+             key = [ source, target ]
+             pair_dates[key] = [ pair_dates[key], date ].compact.min
+           end
 
       # 2. ACCOUNT-BASED PAIRS – use the account's oldest entry date
       account_first_entry_dates = Entry.group(:account_id).minimum(:date)
 
       Account.joins(:family)
-             .where.not("families.currency = accounts.currency")
-             .select("accounts.id, accounts.currency AS source, families.currency AS target")
-             .find_each do |account|
-        earliest_entry_date = account_first_entry_dates[account.id]
+        .where.not("families.currency = accounts.currency")
+        .select("accounts.id, accounts.currency AS source, families.currency AS target")
+        .find_each do |account|
+          earliest_entry_date = account_first_entry_dates[account.id]
 
-        chosen_date = [ earliest_entry_date, default_start_date ].compact.min
+          chosen_date = [ earliest_entry_date, default_start_date ].compact.min
 
-        key = [ account.source, account.target ]
-        pair_dates[key] = [ pair_dates[key], chosen_date ].compact.min
-      end
+          key = [ account.source, account.target ]
+          pair_dates[key] = [ pair_dates[key], chosen_date ].compact.min
+        end
 
       # Convert to array of hashes for ease of use
       pair_dates.map do |(source, target), date|

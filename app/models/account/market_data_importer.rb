@@ -22,9 +22,9 @@ class Account::MarketDataImporter
            .group(:currency)
            .minimum(:date)
            .each do |source_currency, date|
-      key = [ source_currency, account.currency ]
-      pair_dates[key] = [ pair_dates[key], date ].compact.min
-    end
+             key = [ source_currency, account.currency ]
+             pair_dates[key] = [ pair_dates[key], date ].compact.min
+           end
 
     # 2. ACCOUNT-BASED PAIR – convert the account currency to the family currency (if different)
     if foreign_account?
