@@ -10,9 +10,10 @@ on:
         default: 'main'
   push:
     tags:
-      - 'v*'
+      - '20*'
     branches:
       - main
+      - dev
 
 env:
   REGISTRY: ghcr.io
@@ -56,6 +57,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Extract version
+        id: version
+        run: |
+          VERSION=$(ruby -I. -r config/initializers/version.rb -e 'puts Finachy.version')
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
       - name: Extract metadata for Docker
         id: meta
         uses: docker/metadata-action@v5
@@ -64,9 +71,11 @@ jobs:
           flavor: latest=auto
           tags: |
             type=sha,format=long
-            type=semver,pattern={{version}}
+            type=ref,event=branch
+            type=ref,event=tag
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
-            type=raw,value=stable,enable=${{ startsWith(github.ref, 'refs/tags/v') }}
+            type=raw,value=${{ env.VERSION }},enable=${{ github.ref == 'refs/heads/main' }}
+            type=raw,value=${{ env.VERSION }}-dev,enable=${{ github.ref != 'refs/heads/main' }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6

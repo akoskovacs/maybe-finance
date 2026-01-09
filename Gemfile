@@ -114,4 +114,5 @@ group :test do
   gem "webmock"
   gem "climate_control"
   gem "simplecov", require: false
+  gem "minitest", "< 6.0"
 end
