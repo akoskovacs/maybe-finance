@@ -99,6 +99,17 @@ jobs:
           outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=A multi-arch Docker image for the Finachy Rails app
           build-args: BUILD_COMMIT_SHA=${{ github.sha }}
 
+      - name: Make GHCR package public
+        run: |
+          gh api \
+            --method PATCH \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /orgs/finachium/packages/container/finachy/settings \
+            -f visibility='public'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Extract metadata for Docker Hub
         id: meta-dockerhub
         uses: docker/metadata-action@v5
