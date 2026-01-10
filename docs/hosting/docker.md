@@ -137,23 +137,23 @@ If you find bugs or have a feature request, be sure to read through our [contrib
 
 ## How to update your app
 
-The mechanism that updates your self-hosted Finachy app is the GHCR (Github Container Registry) Docker image that you see in the `compose.yml` file:
+The mechanism that updates your self-hosted Finachy app is the Docker Hub image that you see in the `compose.yml` file:
 
 ```yml
-image: ghcr.io/finachium/finachy:latest
+image: finachium/finachy:latest
 ```
 
-We recommend using one of the following images, but you can pin your app to whatever version you'd like (see [packages](https://github.com/finachium/finachy/pkgs/container/finachy)):
+We recommend using one of the following images, but you can pin your app to whatever version you'd like (see [Docker Hub](https://hub.docker.com/r/finachium/finachy/tags)):
 
-- `ghcr.io/finachium/finachy:latest` (latest commit)
-- `ghcr.io/finachium/finachy:stable` (latest release)
+- `finachium/finachy:latest` (latest commit)
+- `finachium/finachy:stable` (latest release)
 
 By default, your app _will
 NOT_ automatically update. To update your self-hosted app, run the following commands in your terminal:
 
 ```bash
 cd ~/docker-apps/finachy # Navigate to whatever directory you configured the app in
-docker compose pull # This pulls the "latest" published image from GHCR
+docker compose pull # This pulls the "latest" published image from Docker Hub
 docker compose build # This rebuilds the app with updates
 docker compose up --no-deps -d web worker # This restarts the app using the newest version
 ```
@@ -163,13 +163,13 @@ docker compose up --no-deps -d web worker # This restarts the app using the newe
 If you'd like to pin the app to a specific version or tag, all you need to do is edit the `compose.yml` file:
 
 ```yml
-image: ghcr.io/finachium/finachy:stable
+image: finachium/finachy:stable
 ```
 
 After doing this, make sure and restart the app:
 
 ```bash
-docker compose pull # This pulls the "latest" published image from GHCR
+docker compose pull # This pulls the "latest" published image from Docker Hub
 docker compose build # This rebuilds the app with updates
 docker compose up --no-deps -d app # This restarts the app using the newest version
 ```
