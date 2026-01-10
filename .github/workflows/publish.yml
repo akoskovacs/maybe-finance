@@ -80,7 +80,9 @@ jobs:
             type=ref,event=branch
             type=ref,event=tag
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            type=raw,value=stable,enable=${{ github.ref == 'refs/heads/main' }}
             type=raw,value=${{ env.VERSION }},enable=${{ github.ref == 'refs/heads/main' }}
+            type=raw,value=dev,enable=${{ github.ref == 'refs/heads/dev' }}
             type=raw,value=${{ env.VERSION }}-dev,enable=${{ github.ref != 'refs/heads/main' }}
 
       - name: Build and push to GHCR
@@ -121,7 +123,9 @@ jobs:
             type=ref,event=branch
             type=ref,event=tag
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            type=raw,value=stable,enable=${{ github.ref == 'refs/heads/main' }}
             type=raw,value=${{ env.VERSION }},enable=${{ github.ref == 'refs/heads/main' }}
+            type=raw,value=dev,enable=${{ github.ref == 'refs/heads/dev' }}
             type=raw,value=${{ env.VERSION }}-dev,enable=${{ github.ref != 'refs/heads/main' }}
 
       - name: Build and push to Docker Hub
