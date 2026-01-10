@@ -4,7 +4,7 @@
 | **Self-Hosted Financial Freedom**
 
 ## :wave: Hey!
-Finachy is a fully working personal finance app that can be [self hosted with Docker](docs/hosting/docker.md).
+Finachy is a fully working personal finance app that can be [self hosted with Docker](#whale-running-the-application-via-docker).
 
 ## :whale: Running the application via Docker
 
