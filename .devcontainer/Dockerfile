@@ -1,4 +1,4 @@
-ARG RUBY_VERSION=3.4.4
+ARG RUBY_VERSION=4.0.0
 FROM ruby:${RUBY_VERSION}-slim-bullseye
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
@@ -21,6 +21,6 @@ RUN gem install foreman
 
 # Install Node.js 20
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
-&& apt-get install -y nodejs
+  && apt-get install -y nodejs
 
 WORKDIR /workspace

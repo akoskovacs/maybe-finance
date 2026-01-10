@@ -1,7 +1,7 @@
 # syntax = docker/dockerfile:1
 
 # Make sure RUBY_VERSION matches the Ruby version in .ruby-version and Gemfile
-ARG RUBY_VERSION=3.4.4
+ARG RUBY_VERSION=4.0.0
 FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim AS base
 
 # Rails app lives here
@@ -18,7 +18,7 @@ ENV RAILS_ENV="production" \
     BUNDLE_PATH="/usr/local/bundle" \
     BUNDLE_WITHOUT="development" \
     BUILD_COMMIT_SHA=${BUILD_COMMIT_SHA}
-    
+
 # Throw-away build stage to reduce size of final image
 FROM base AS build
 

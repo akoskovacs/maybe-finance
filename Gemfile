@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby file: ".ruby-version"
 
 # Rails
-gem "rails", "~> 7.2.2"
+gem "rails", "~> 7.2.3"
 
 # Drivers
 gem "pg", "~> 1.5"
@@ -17,7 +17,7 @@ gem "bootsnap", require: false
 gem "importmap-rails"
 gem "propshaft"
 gem "tailwindcss-rails"
-gem "lucide-rails", github: "maybe-finance/lucide-rails"
+gem "lucide-rails", github: "finachium/lucide-rails"
 
 # Hotwire + UI
 gem "stimulus-rails"
@@ -114,4 +114,5 @@ group :test do
   gem "webmock"
   gem "climate_control"
   gem "simplecov", require: false
+  gem "minitest", "< 6.0"
 end

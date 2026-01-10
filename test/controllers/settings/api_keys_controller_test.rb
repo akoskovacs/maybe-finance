@@ -151,7 +151,9 @@ end
       }
     }
 
+    assert_redirected_to settings_api_key_path
     first_key = @user.api_keys.active.first
+    assert_not_nil first_key, "First API key should be created"
 
     # Create second API key
     post settings_api_key_path, params: {

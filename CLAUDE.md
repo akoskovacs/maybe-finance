@@ -66,9 +66,9 @@ Only proceed with pull request creation if ALL checks pass.
 ## High-Level Architecture
 
 ### Application Modes
-The Maybe app runs in two distinct modes:
-- **Managed**: The Maybe team operates and manages servers for users (Rails.application.config.app_mode = "managed")
-- **Self Hosted**: Users host the Maybe app on their own infrastructure, typically through Docker Compose (Rails.application.config.app_mode = "self_hosted")
+The Finachy app runs in two distinct modes:
+- **Managed**: The Finachy team operates and manages servers for users (Rails.application.config.app_mode = "managed")
+- **Self Hosted**: Users host the Finachy app on their own infrastructure, typically through Docker Compose (Rails.application.config.app_mode = "self_hosted")
 
 ### Core Domain Model
 The application is built around financial data management with these key relationships:
@@ -108,7 +108,7 @@ Sidekiq handles asynchronous tasks:
 - **Stimulus Controllers**: Handle interactivity, organized alongside components
 - **Charts**: D3.js for financial visualizations (time series, donut, sankey)
 - **Styling**: Tailwind CSS v4.x with custom design system
-  - Design system defined in `app/assets/tailwind/maybe-design-system.css`
+  - Design system defined in `app/assets/tailwind/finachy-design-system.css`
   - Always use functional tokens (e.g., `text-primary` not `text-white`)
   - Prefer semantic HTML elements over JS components
   - Use `icon` helper for icons, never `lucide_icon` directly
@@ -183,7 +183,7 @@ Sidekiq handles asynchronous tasks:
 ## TailwindCSS Design System
 
 ### Design System Rules
-- **Always reference `app/assets/tailwind/maybe-design-system.css`** for primitives and tokens
+- **Always reference `app/assets/tailwind/finachy-design-system.css`** for primitives and tokens
 - **Use functional tokens** defined in design system:
   - `text-primary` instead of `text-white`
   - `bg-container` instead of `bg-white`

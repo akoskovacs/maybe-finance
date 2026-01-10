@@ -1,7 +1,7 @@
-module Maybe
+module Finachy
   class << self
     def version
-      Semver.new(semver)
+      date_version
     end
 
     def commit_sha
@@ -13,8 +13,8 @@ module Maybe
     end
 
     private
-      def semver
-        "0.6.0"
+      def date_version
+        "2026.01.10-01"
       end
   end
 end
