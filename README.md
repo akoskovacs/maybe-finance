@@ -114,6 +114,63 @@ networks:
     driver: bridge
 ```
 
+### .env Example
+
+> [!IMPORTANT]
+> **Security**: Always generate a new `SECRET_KEY_BASE` using `openssl rand -hex 64` for production deployments. Never use the example value shown above.
+
+Create a `.env` file alongside your `compose.yml` with the following content. Customize the values as needed:
+
+```bash
+# ================================
+# Database Configuration
+# ================================
+POSTGRES_USER=finachy_user
+POSTGRES_PASSWORD=finachy_password
+POSTGRES_DB=finachy_production
+
+# ================================
+# Application Security
+# ================================
+# Regenerate the secure random key with: openssl rand -hex 64
+SECRET_KEY_BASE=a7523c3d0ae56415046ad8abae168d71074a79534a7062258f8d1d51ac2f76d3c3bc86d86b6b0b307df30d9a6a90a2066a3fa9e67c5e6f374dbd7dd4e0778e13
+
+# ================================
+# Optional: OpenAI Integration
+# ================================
+# NOTE: Enabling OpenAI will incur costs when you use AI-related features (chat, rules).
+# Make sure you have set appropriate spend limits on your OpenAI account before adding this.
+# OPENAI_ACCESS_TOKEN=sk-your-openai-api-key-here
+
+# ================================
+# Optional: Custom Configuration
+# ================================
+# Uncomment and customize these if needed:
+# APP_DOMAIN=finachy.yourdomain.com
+# PORT=3000
+# SMTP_ADDRESS=smtp.example.com
+# SMTP_PORT=465
+# SMTP_USERNAME=your-smtp-username
+# SMTP_PASSWORD=your-smtp-password
+# EMAIL_SENDER=noreply@yourdomain.com
+# SYNTH_API_KEY=your-synth-api-key
+```
+> [!TIP]
+> The Docker Compose configuration automatically sets `SELF_HOSTED=true`, `RAILS_FORCE_SSL=false`, `RAILS_ASSUME_SSL=false`, `DB_HOST=db`, `DB_PORT=5432`, and `REDIS_URL=redis://redis:6379/1` for you. You don't need to include these in your `.env` file.
+
+
+Then just start the containers with:
+
+```bash
+docker compose up
+```
+
+or in detached mode:
+
+```bash
+docker compose up -d
+```
+
 ### Environment Variables
 
 Create an `.env` file alongside your `compose.yml` to customize your installation.
@@ -149,6 +206,17 @@ Create an `.env` file alongside your `compose.yml` to customize your installatio
 | **Integrations** | | |
 | `SYNTH_API_KEY` | Key for [Synth Finance](https://synthfinance.com/) (exchange rates/stocks). | |
 | `OPENAI_ACCESS_TOKEN` | (Optional) OpenAI API Key for AI features. | |
+
+### Troubleshooting
+
+**Database initialization error**: If you see `initdb: error: directory "/var/lib/postgresql/data" exists but is not empty`, remove the old volumes:
+
+```bash
+docker compose down -v
+docker compose up -d
+```
+
+**Note**: This will delete all existing database data.
 
 
 ## :wrench: Local Development Setup
