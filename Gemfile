@@ -3,7 +3,9 @@ source "https://rubygems.org"
 ruby file: ".ruby-version"
 
 # Rails
-gem "rails", "~> 7.2.3"
+gem "rails", "~> 8.1.3"
+gem "cgi"
+
 
 # Drivers
 gem "pg", "~> 1.5"
@@ -23,6 +25,7 @@ gem "lucide-rails", github: "finachium/lucide-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
 gem "view_component"
+gem "rails-i18n", "~> 8.1.0"
 
 # https://github.com/lookbook-hq/lookbook/issues/712
 # TODO: Remove max version constraint when fixed
