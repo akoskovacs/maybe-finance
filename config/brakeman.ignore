@@ -92,41 +92,7 @@
         95
       ],
       "note": "Uses similar pattern to Rails internal form builder"
-    },
-    {
-      "warning_type": "Dynamic Render Path",
-      "warning_code": 15,
-      "fingerprint": "fb6f7abeabc405d6882ffd41dbe8016403ef39307a5c6b4cd7b18adfaf0c24bf",
-      "check_name": "Render",
-      "message": "Render path contains parameter value",
-      "file": "app/views/import/configurations/show.html.erb",
-      "line": 34,
-      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
-      "code": "render(partial => permitted_import_configuration_path(Current.family.imports.find(params[:import_id])), { :locals => ({ :import => Current.family.imports.find(params[:import_id]) }) })",
-      "render_path": [
-        {
-          "type": "controller",
-          "class": "Import::ConfigurationsController",
-          "method": "show",
-          "line": 7,
-          "file": "app/controllers/import/configurations_controller.rb",
-          "rendered": {
-            "name": "import/configurations/show",
-            "file": "app/views/import/configurations/show.html.erb"
-          }
-        }
-      ],
-      "location": {
-        "type": "template",
-        "template": "import/configurations/show"
-      },
-      "user_input": "params[:import_id]",
-      "confidence": "Weak",
-      "cwe_id": [
-        22
-      ],
-      "note": ""
     }
   ],
-  "brakeman_version": "7.1.0"
+  "brakeman_version": "8.0.4"
 }
