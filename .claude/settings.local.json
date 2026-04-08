@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bin/rails test:*)",
+      "Bash(bin/brakeman --no-pager)",
+      "Bash(bin/rubocop -f github)",
+      "Bash(bin/importmap audit:*)",
+      "Bash(echo \"Exit code: $?\")",
+      "Bash(bundle install:*)"
+    ]
+  }
+}
